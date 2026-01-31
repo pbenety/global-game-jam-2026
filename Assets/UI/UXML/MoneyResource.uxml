@@ -1,0 +1,10 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="MoneyResourceContainer" style="flex-grow: 1; align-items: center; align-self: center; justify-content: center; align-content: flex-start; flex-direction: row; flex-wrap: wrap; width: 100%; height: 100%;">
+        <ui:VisualElement style="flex-grow: 1; width: 25%; height: auto;">
+            <ui:Image name="MoneyIcon" style="background-image: resource(&quot;Art/UI/Money&quot;); height: 95px; width: 92px;"/>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; width: 75%;">
+            <ui:Label text="500" name="MoneyValue" style="-unity-text-align: middle-right; height: auto; width: auto; font-size: 70px; -unity-font-style: bold; -unity-font-definition: url(&quot;project://database/Library/unity%20default%20resources?fileID=10102&amp;guid=0000000000000000e000000000000000&amp;type=0#LegacyRuntime&quot;);"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

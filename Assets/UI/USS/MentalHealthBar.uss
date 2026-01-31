@@ -1,0 +1,39 @@
+#MentalHealthSlider > .unity-slider__input > #unity-drag-container {
+    display: flex;
+    width: auto;
+    padding-left: 0;
+    margin-left: 13%;
+    margin-right: 4%;
+    height: auto;
+}
+
+#MentalHealthSlider > .unity-slider__input > #unity-drag-container > #unity-dragger {
+    display: none;
+}
+
+#MentalHealthSlider > .unity-slider__input > #unity-drag-container > #unity-tracker {
+    flex-grow: 0;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 4.5%;
+    padding-bottom: 0;
+    justify-content: flex-start;
+    align-self: auto;
+    align-items: auto;
+    align-content: auto;
+    position: relative;
+    right: auto;
+    left: auto;
+    top: auto;
+    bottom: auto;
+    padding-top: 0;
+    margin-top: 4%;
+}
+
+#MentalHealthContainer > #MentalHealthSlider > .unity-slider__input > #unity-drag-container > #unity-tracker > #unity-fill {
+    background-image: resource("Art/UI/Battery_liquid");
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+
