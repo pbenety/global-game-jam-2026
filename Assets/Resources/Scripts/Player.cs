@@ -5,26 +5,24 @@ namespace Omotenashi
 {
     public class Player : MonoBehaviour
     {
-        private int _mentalHealth;
+        [SerializeField] private int _mentalHealth;
+        public int MentalHealth { get => _mentalHealth; }
+        
+        //Components
+        private Health _health;
 
-        public int MentalHealth
+        void Awake()
         {
-            get => _mentalHealth;
+            _health = new Health(_mentalHealth);
         }
 
-        private PlayerStates _currentState;
-
-        public PlayerStates CurrentState
-        {
-            get { return _currentState; }
-        }
-
-
+        
+        
 
     }
 
 
-    public enum PlayerStates
+    public enum Emotions
     {
         Neutral,
         Happy,
