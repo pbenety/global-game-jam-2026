@@ -1,0 +1,7 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="DepressionBarContainer" style="flex-grow: 1; justify-content: center; align-self: auto; align-items: stretch;">
+        <ui:Label text="DEPRESSION BAR" style="-unity-font-style: bold; font-size: 20px; -unity-text-align: upper-center; background-image: url(&quot;project://database/Packages/dev.yarnspinner.unity/Runtime/Views/Textures/CharacterBubble.png?fileID=21300000&amp;guid=2b62f169ad6c04c2d9a3fa4e8c3aa694&amp;type=3#CharacterBubble&quot;);"/>
+        <ui:Slider label="" value="5" high-value="10" show-input-field="false" fill="true" direction="Horizontal" inverted="false"/>
+        <ui:ProgressBar value="5" title="" high-value="10"/>
+    </ui:VisualElement>
+</ui:UXML>

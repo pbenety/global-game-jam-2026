@@ -1,0 +1,10 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="DateIcon" src="project://database/Assets/UI/DateIcon.uxml?fileID=9197481963319205126&amp;guid=d3ce1062654af1048af6b5c68a8184e8&amp;type=3#DateIcon"/>
+    <ui:Template name="DepressionBar" src="project://database/Assets/UI/DepressionBar.uxml?fileID=9197481963319205126&amp;guid=08e4aa5d07777a541861a5e67f4689bc&amp;type=3#DepressionBar"/>
+    <ui:Template name="MasksBar" src="project://database/Assets/UI/MasksBar.uxml?fileID=9197481963319205126&amp;guid=c3799248537f36745b6a30fabf997985&amp;type=3#MasksBar"/>
+    <ui:Template name="MoneyResource" src="project://database/Assets/UI/MoneyResource.uxml?fileID=9197481963319205126&amp;guid=9f846384945a32541ad027e48831747b&amp;type=3#MoneyResource"/>
+    <ui:Instance template="MoneyResource" style="position: absolute; top: 22px; left: 1669px; height: 112px; width: 245px;"/>
+    <ui:Instance template="DateIcon" style="position: absolute; height: 149px; width: 179px; top: 2px; left: 0;"/>
+    <ui:Instance template="DepressionBar" style="position: absolute; top: 0; left: 549px; height: 154px; width: 832px;"/>
+    <ui:Instance template="MasksBar" style="bottom: -1px; right: auto; position: absolute; left: 515px; height: 195px; width: 913px;"/>
+</ui:UXML>

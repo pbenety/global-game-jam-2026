@@ -1,0 +1,3 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="DateIcon" style="flex-grow: 1; background-image: url(&quot;project://database/Packages/dev.yarnspinner.unity/Editor/Editors/Icons/YarnSpinnerLogo.png?fileID=21300000&amp;guid=528a6dd601766934abb8b1053bd798ef&amp;type=3#YarnSpinnerLogo&quot;);"/>
+</ui:UXML>
