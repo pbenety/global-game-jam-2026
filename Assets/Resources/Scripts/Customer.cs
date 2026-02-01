@@ -21,6 +21,10 @@ namespace Omotenashi
         public static event Action<DialogueType, string> OnDialogue;
         public static event Action OnWaitingForReaction;
 
+        public static event Action OnGoodReaction;
+        public static event Action OnBadReaction;
+        public static event Action OnNeutral;
+
 
 
         void Awake()
@@ -38,6 +42,21 @@ namespace Omotenashi
             if (OnDialogue == null)
             {
                 OnDialogue = delegate { };
+            }
+
+            if (OnGoodReaction == null)
+            {
+                OnGoodReaction = delegate { };
+            }
+
+            if (OnBadReaction == null)
+            {
+                OnBadReaction = delegate { };
+            }
+
+            if (OnNeutral == null)
+            {
+                OnNeutral = delegate { };
             }
 
             if (_charDialogues == null)
@@ -74,16 +93,19 @@ namespace Omotenashi
             if (emotion == _goodEmotion)
             {
                 OnDialogue?.Invoke(DialogueType.Reaction, _charDialogues.GetGood());
+                OnGoodReaction?.Invoke();
             }
             else if (emotion == _badEmotion)
             {
                 _customerAnimator.SetDefaultSpriteState(false);
                 _customerAnimator.SetBadSpriteState(true);
                 OnDialogue?.Invoke(DialogueType.Reaction, _charDialogues.GetBad());
+                OnBadReaction?.Invoke();
             }
             else
             {
                 OnDialogue?.Invoke(DialogueType.Reaction, _charDialogues.GetNoReact());
+                OnNeutral?.Invoke();
             }
         }
 
