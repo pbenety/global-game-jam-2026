@@ -572,6 +572,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4813094323902669762, guid: 6196c80f881524f8697185e1d0856b32, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8775591022943968631, guid: 6196c80f881524f8697185e1d0856b32, type: 3}
       propertyPath: m_Name
       value: DialogueCanvas
@@ -610,7 +614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4b8e04a208e492f89292c2edc204b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  _mentalHealth: 0
+  _mentalHealth: 10
   _money: 0
 --- !u!4 &1985493661
 Transform:
