@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System;
 
 namespace Omotenashi
 {
@@ -13,9 +13,17 @@ namespace Omotenashi
         
         //Components
         private Health _health;
+        
+        //Delegate
+        public static event Action OnGameOver;
 
         void Awake()
         {
+            if (OnGameOver == null)
+            {
+                OnGameOver = delegate { };
+            }
+            
             _health = new Health(_mentalHealth);
         }
 
@@ -58,6 +66,15 @@ namespace Omotenashi
         private void NeutralReactionEffects()
         {
             _money += 60;
+            
+        }
+
+        public void CheckHealth()
+        {
+            if (!_health.IsHealthAboveZero())
+            {
+                OnGameOver?.Invoke();
+            }
         }
 
         private void ResetPlayer()

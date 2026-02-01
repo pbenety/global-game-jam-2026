@@ -26,6 +26,9 @@ namespace Omotenashi
         void Start()
         {
             Customer.OnDespawn += StartSpawning;
+            GameManager.OnGameStart += SetGameActive;
+            GameManager.OnGameStart += StartSpawning;
+            Player.OnGameOver += SetGameInactive;
             
             StartSpawning();
         }
@@ -33,6 +36,10 @@ namespace Omotenashi
         private void OnDestroy()
         {
             Customer.OnDespawn -= StartSpawning;
+            GameManager.OnGameStart -= SetGameActive;
+            GameManager.OnGameStart -= StartSpawning;
+            
+            Player.OnGameOver -= SetGameInactive;
         }
 
         void StartSpawning()
@@ -47,6 +54,16 @@ namespace Omotenashi
         private int GetRandomIndex()
         {
             return Random.Range(0, _customerPrefabs.Length);
+        }
+
+        private void SetGameActive()
+        {
+            gameActive = true;
+        }
+
+        private void SetGameInactive()
+        {
+            gameActive = false;
         }
     }
 }
