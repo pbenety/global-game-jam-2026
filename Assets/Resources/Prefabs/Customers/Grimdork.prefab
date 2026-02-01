@@ -29,7 +29,7 @@ PrefabInstance:
     - target: {fileID: 1658885576710010207, guid: d19dd3daa7e0b4f0c8bbcdba0f041d68, type: 3}
       propertyPath: _intro
       value: "Salutations, m\u2019lady. I followed the scent of new video games but
-        tis scent has lead me to thy feet. <i>tips imaginary fedora</i>"
+        tis scent has lead me to thy feet. <i>tips fedora</i>"
       objectReference: {fileID: 0}
     - target: {fileID: 1658885576710010207, guid: d19dd3daa7e0b4f0c8bbcdba0f041d68, type: 3}
       propertyPath: _noReact
