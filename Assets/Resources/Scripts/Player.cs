@@ -40,6 +40,7 @@ namespace Omotenashi
             Customer.OnBadReaction += BadReactionEffects;
             Customer.OnNeutral += NeutralReactionEffects;
             UIPrototype.UIEvents.MoneyChanged?.Invoke(_money);
+            UIPrototype.UIEvents.MentalHealthChanged?.Invoke(_health.CurrentHealth);
         }
 
         void OnDestroy()

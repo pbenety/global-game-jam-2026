@@ -13,7 +13,6 @@ namespace Omotenashi
         {
             _currentHealth = initialHealth;
             _maxHealth = initialHealth;
-            UIPrototype.UIEvents.MentalHealthChanged?.Invoke(_currentHealth);
         }
 
         public void IncreaseHealth(int amount)
