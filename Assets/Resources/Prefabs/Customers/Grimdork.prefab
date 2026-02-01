@@ -8,18 +8,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1174197292402938512, guid: d19dd3daa7e0b4f0c8bbcdba0f041d68, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1411296233497257401, guid: d19dd3daa7e0b4f0c8bbcdba0f041d68, type: 3}
+      propertyPath: m_Name
+      value: Sprite_defualt
+      objectReference: {fileID: 0}
+    - target: {fileID: 1658885576710010207, guid: d19dd3daa7e0b4f0c8bbcdba0f041d68, type: 3}
+      propertyPath: _bad
+      value: "Hmm?! Wha\u2026?! Is thou a robot?! Well thou need not bother. I have
+        one of those at home already. <i>Odourously disappears</i>"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1658885576710010207, guid: d19dd3daa7e0b4f0c8bbcdba0f041d68, type: 3}
+      propertyPath: _good
+      value: Ah! Thou puts on a brave face but thy blush betrays thy inner desires.
+        Dinner later perhaps? <i>slides card containing a phone number on the counter</i>
+      objectReference: {fileID: 0}
     - target: {fileID: 1658885576710010207, guid: d19dd3daa7e0b4f0c8bbcdba0f041d68, type: 3}
       propertyPath: _intro
       value: "Salutations, m\u2019lady. I followed the scent of new video games but
         tis scent has lead me to thy feet. <i>tips imaginary fedora</i>"
       objectReference: {fileID: 0}
+    - target: {fileID: 1658885576710010207, guid: d19dd3daa7e0b4f0c8bbcdba0f041d68, type: 3}
+      propertyPath: _noReact
+      value: "I see I have touched thy emotions. Perhaps we shall cross paths again.
+        But for now, there\u2019s a dungeon that needs raiding."
+      objectReference: {fileID: 0}
     - target: {fileID: 1717140901441756534, guid: d19dd3daa7e0b4f0c8bbcdba0f041d68, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 331.0767
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1717140901441756534, guid: d19dd3daa7e0b4f0c8bbcdba0f041d68, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 76.56284
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1717140901441756534, guid: d19dd3daa7e0b4f0c8bbcdba0f041d68, type: 3}
       propertyPath: m_LocalPosition.z
@@ -56,6 +79,34 @@ PrefabInstance:
     - target: {fileID: 4100575036693718365, guid: d19dd3daa7e0b4f0c8bbcdba0f041d68, type: 3}
       propertyPath: _goodEmotion
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875297083028472031, guid: d19dd3daa7e0b4f0c8bbcdba0f041d68, type: 3}
+      propertyPath: _endScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875297083028472031, guid: d19dd3daa7e0b4f0c8bbcdba0f041d68, type: 3}
+      propertyPath: _startScale
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875297083028472031, guid: d19dd3daa7e0b4f0c8bbcdba0f041d68, type: 3}
+      propertyPath: _timeToLerp
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113230436579974187, guid: d19dd3daa7e0b4f0c8bbcdba0f041d68, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4795446067665244146, guid: 4034dffb236bd4f4f88fbf9ea40e5a2a, type: 3}
+    - target: {fileID: 6113230436579974187, guid: d19dd3daa7e0b4f0c8bbcdba0f041d68, type: 3}
+      propertyPath: m_SortingOrder
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7042927367053274627, guid: d19dd3daa7e0b4f0c8bbcdba0f041d68, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -2261358211097139356, guid: fca81edc391294f33b439f237bc3f1d8, type: 3}
+    - target: {fileID: 7042927367053274627, guid: d19dd3daa7e0b4f0c8bbcdba0f041d68, type: 3}
+      propertyPath: m_SortingOrder
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 7048499559774481182, guid: d19dd3daa7e0b4f0c8bbcdba0f041d68, type: 3}
       propertyPath: m_Name

@@ -40,6 +40,7 @@ namespace Omotenashi
 
         public void ShowDialogueBox(DialogueType dialogueType, string dialogue)
         {
+            
             _dialogueText.text = dialogue;
             currentDialogueType = dialogueType;
             
