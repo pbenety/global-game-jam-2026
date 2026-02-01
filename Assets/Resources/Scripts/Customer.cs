@@ -8,19 +8,15 @@ namespace Omotenashi
 {
     public class Customer : MonoBehaviour
     {
-
-        //public List<Dialogue> CharDialogues;
         [SerializeField] private Dialogue _charDialogues;
-        public int _dialogueIndex = 0;
-
-
-        public GameObject button;
+        [SerializeField] private Emotions _goodEmotion;
+        [SerializeField] private Emotions _badEmotion;
+        
         
         //Delagates
         public static event Action OnArrivedAtCounter;
+        public static event Action<DialogueType, string> OnDialogue;
         public static event Action OnWaitingForReaction;
-
-        //Start Dialogue
 
 
 
@@ -36,71 +32,59 @@ namespace Omotenashi
                 OnWaitingForReaction = delegate { };
             }
 
+            if (OnDialogue == null)
+            {
+                OnDialogue = delegate { };
+            }
+
             if (_charDialogues == null)
             {
                 _charDialogues = gameObject.GetComponent<Dialogue>();
             }
         }
 
-        void Start()
+        void OnEnable()
         {
-            Emotion.OnEmotionSelected += Reaction;
-            OnWaitingForReaction += SetUpReaction;
+            Emotion.OnEmotionSelected += CheckReaction;
+            UIManager.OnClosingDialogueClosed += WalksAwayFromCounter;
+            OnDialogue += Dialogue;
             
             
             WalksToCounter();
         }
 
-        void OnDestroy()
+        void OnDisable()
         {
-            Emotion.OnEmotionSelected -= Reaction;
-            OnWaitingForReaction -= SetUpReaction;
+            Emotion.OnEmotionSelected -= CheckReaction;
+            UIManager.OnClosingDialogueClosed -= WalksAwayFromCounter;
         }
         
         //Dialogue System
         public void PlayIntroDialogue()
         {
-            Debug.Log("Playing intro dialogue");
-            
-            OnWaitingForReaction?.Invoke();
+            Debug.Log("Showing dialogue box");
+            OnDialogue?.Invoke(DialogueType.Intro, _charDialogues.GetIntro());
         }
-
-        public void SetUpReaction()
+        
+        public void CheckReaction(Emotions emotion)
         {
-            button.SetActive(true);
-        }
-
-        public void HideButton()
-        {
-            button.SetActive(false);
-        }
-
-        public void Reaction(Emotions emotion)
-        {
-            HideButton();
-            switch (emotion)
+            if (emotion == _goodEmotion)
             {
-                case Emotions.Neutral:
-                {
-                    Debug.Log(emotion);
-                    break;
-                }
-                case Emotions.Happy:
-                {
-                    Debug.Log(emotion);
-                    break;
-                }
-                case Emotions.Sad:
-                {
-                    Debug.Log(emotion);
-                    break;
-                }
-                case Emotions.Angry:
-                {
-                    Debug.Log(emotion);
-                    break;
-                }
+                OnDialogue?.Invoke(DialogueType.Reaction, _charDialogues.GetGood());
             }
+            else if (emotion == _badEmotion)
+            {
+                OnDialogue?.Invoke(DialogueType.Reaction, _charDialogues.GetBad());
+            }
+            else
+            {
+                OnDialogue?.Invoke(DialogueType.Reaction, _charDialogues.GetNoReact());
+            }
+        }
+
+        void Dialogue(DialogueType dialogueType, string dialogue)
+        {
+            Debug.Log(dialogueType + " " + dialogue);
         }
 
 
@@ -109,20 +93,20 @@ namespace Omotenashi
         {
             //Walks to Counter
             WalkToCounterAnim();
-            //On Finish need to broadcast Complete
+            
+            //On Arrival
             PlayIntroDialogue();
-            //OnArrivedAtCounter?.Invoke();
         }
 
         public void WalkToCounterAnim()
         {
             Debug.Log("Walking to the counter");
-            //throw new System.NotImplementedException();
+            
         }
 
         public void WalksAwayFromCounter()
         {
-
+            Debug.Log("Walks away from the counter");
         }
     }
 }

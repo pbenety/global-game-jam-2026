@@ -4,33 +4,30 @@ namespace Omotenashi
 {
     public class Dialogue : MonoBehaviour
     {
-        [SerializeField] private int _size;
-        public int Size => _size;
-        
-        [SerializeField] private string[] _intro;
-        [SerializeField] private string[] _good;
-        [SerializeField] private string[] _bad;
-        [SerializeField] private string[] _noReact;
+        [SerializeField] private string _intro;
+        [SerializeField] private string _good;
+        [SerializeField] private string _bad;
+        [SerializeField] private string _noReact;
 
 
-        public string GetIntro(int index)
+        public string GetIntro()
         {
-            return _intro[index];
+            return _intro;
         }
 
-        public string GetGood(int index)
+        public string GetGood()
         {
-            return _good[index];
+            return _good;
         }
 
-        public string GetBad(int index)
+        public string GetBad()
         {
-            return _bad[index];
+            return _bad;
         }
 
-        public string GetNoReact(int index)
+        public string GetNoReact()
         {
-            return _noReact[index];
+            return _noReact;
         }
     }
 }
