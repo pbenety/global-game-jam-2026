@@ -34,6 +34,7 @@ namespace Omotenashi
             Customer.OnGoodReaction += GoodReactionEffects;
             Customer.OnBadReaction += BadReactionEffects;
             Customer.OnNeutral += NeutralReactionEffects;
+            UIPrototype.UIEvents.MoneyChanged?.Invoke(_money);
         }
 
         void OnDestroy()
@@ -56,6 +57,7 @@ namespace Omotenashi
         {
             _health.IncreaseHealth(2);
             _money += 120;
+            UIPrototype.UIEvents.MoneyChanged?.Invoke(_money);
         }
 
         private void BadReactionEffects()

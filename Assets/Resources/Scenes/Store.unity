@@ -481,6 +481,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4813094323902669762, guid: 6196c80f881524f8697185e1d0856b32, type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8775591022943968631, guid: 6196c80f881524f8697185e1d0856b32, type: 3}
       propertyPath: m_Name
       value: DialogueCanvas
