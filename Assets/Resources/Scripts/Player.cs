@@ -13,6 +13,8 @@ namespace Omotenashi
         
         //Components
         private Health _health;
+
+        public int PLayerHealth;
         
         //Delegate
         public static event Action OnGameOver;
@@ -27,7 +29,10 @@ namespace Omotenashi
             _health = new Health(_mentalHealth);
         }
 
-
+        void Update()
+        {
+            PLayerHealth = _health.CurrentHealth;
+        }
         void Start()
         {
             Emotion.OnEmotionSelected += MaskUsed;
@@ -58,17 +63,20 @@ namespace Omotenashi
             _health.IncreaseHealth(2);
             _money += 120;
             UIPrototype.UIEvents.MoneyChanged?.Invoke(_money);
+            CheckHealth();
         }
 
         private void BadReactionEffects()
         {
             _health.DecreaseHealth(1);
+            CheckHealth();
         }
 
         private void NeutralReactionEffects()
         {
             _money += 60;
-            
+            UIPrototype.UIEvents.MoneyChanged?.Invoke(_money);
+            CheckHealth();
         }
 
         public void CheckHealth()
