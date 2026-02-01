@@ -23,11 +23,17 @@ namespace Omotenashi
         void Start()
         {
             Emotion.OnEmotionSelected += MaskUsed;
+            Customer.OnGoodReaction += GoodReactionEffects;
+            Customer.OnBadReaction += BadReactionEffects;
+            Customer.OnNeutral += NeutralReactionEffects;
         }
 
         void OnDestroy()
         {
             Emotion.OnEmotionSelected -= MaskUsed;
+            Customer.OnGoodReaction -= GoodReactionEffects;
+            Customer.OnBadReaction -= BadReactionEffects;
+            Customer.OnNeutral -= NeutralReactionEffects;
         }
 
         private void MaskUsed(Emotions emotion)
