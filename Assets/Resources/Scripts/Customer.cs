@@ -19,7 +19,7 @@ namespace Omotenashi
         //Delagates
         public static event Action OnArrivedAtCounter;
         public static event Action<DialogueType, string> OnDialogue;
-        public static event Action OnWaitingForReaction;
+        public static event Action OnDespawn;
 
         public static event Action OnGoodReaction;
         public static event Action OnBadReaction;
@@ -34,9 +34,9 @@ namespace Omotenashi
                 OnArrivedAtCounter = delegate { };
             }
 
-            if (OnWaitingForReaction == null)
+            if (OnDespawn == null)
             {
-                OnWaitingForReaction = delegate { };
+                OnDespawn = delegate { };
             }
 
             if (OnDialogue == null)
@@ -151,6 +151,7 @@ namespace Omotenashi
             }
             
             gameObject.SetActive(false);
+            OnDespawn?.Invoke();
             yield return null;
         }
     }
